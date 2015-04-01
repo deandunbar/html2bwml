@@ -95,6 +95,6 @@ website_rewriter = rewrite()
 bwml = website_rewriter.rewrite_to_bwml("http://islandshare.rocks")
 new_file_info = website_rewriter.save_to_metadisk()
 new_file_info = json.loads(new_file_info)
-print new_file_info
+print new_file_info['filehash'] + "?key=" + new_file_info['key']
 
 
